@@ -1,0 +1,24 @@
+Fitness King  -by Yash Metwasa 
+
+Please open first login or home page
+login page:
+usename : admin
+password : 12345
+
+refrence: 
+	For css : w3school
+	For js: w3school & stack overflow
+
+I created this website to sell products related to fitness.
+There are main 5 webpages(Welcome, Nutrition, Equipment, Contact Us, and Cart) & also 2 pages for guests.
+login.html
+By logging in successfully user can access the rest of the main pages. 
+Nutrition.html & Equipment.html 
+   In these both pages, you will find products related to Fitness on which supplements are available on Nutrition and Gym Equipments are on the Equipment page.  By click add to cart button products will be added in the cart.
+
+Cart.html
+On this page, all the products can be seen on in the cart which is added by the user from the nutrition and equipment page. The total will be displayed at the end of the cart.  If user will increase or decrease the quantity of cart the amount dynamically change in the total of the cart. I also create validation for the quantity which is if the user will decrease quantity from 1 to 0 or in the minus(-) then it's not allowed to do it.
+If the user wants to remove the products in the carts he can remove it.
+At the last form is designed for payment in which every input field validated by javascript. When the user clicks on the purchase button, a message will be displayed and local storage will clear.
+
+By clicking on logout user will be redirect on login page.

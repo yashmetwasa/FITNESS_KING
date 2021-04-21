@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn - Fitness King</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"  />
+</head>
+<body>
+    <nav class="cart-nav">
+		<div><img src="media/fitness_king.png" /></div>
+		<img src="media/fitness_king2.png" alt="not found" />
+		<ul class="setlogin">
+			<li><a href="Home.html">Home</a></li>
+      <li><a href="login.html" class="active">Login</a></li>
+		</ul>
+    </nav>
+    <div id="login-div">
+        <form id="login">
+            <h2 id="login-header">Sign In</h2>
+            <input type="text" name="userid" placeholder="Enter your username"/>
+            <input type="password" name="pswrd" placeholder="Enter your password"/>
+            <input type="button" onclick="check(this.form)" value="LogIn"/>
+        </form>
+    </div>
+    <footer id="footer">
+		<p>Yash Metwasa &copy;Fitness King - 2020</p>
+	</footer>
+  <script language="javascript">
+        function check(form)
+        {
+          if(form.userid.value == "admin" && form.pswrd.value == "12345")
+          {
+            alert("Welcome to the world of Fitness");
+            window.open("welcome.html","_self");
+          }
+          else
+          {
+            alert("Invalid Password or Username");
+          }
+        }
+    </script>
+</body>
+</html>

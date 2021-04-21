@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fitness King - Product Cart</title>
+<link rel="stylesheet" type="text/css" href="css/style-1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css"  />
+
+</head>
+
+<body>
+<div id="main-div">
+	<nav class="cart-nav">
+		<div><img src="media/fitness_king.png" /></div>
+		<img src="media/fitness_king2.png" alt="not found" />
+		<ul>
+			<li><a href="welcome.html">Welcome</a></li>
+			<li><a href="nutrition.html">Nutrition</a></li>
+      <li><a href="equipment.html">Equipments</a></li>
+      <li><a href="contact_Us.html">Contact Us</a></li>
+            <li id="cart-active" class="cart">
+				<a href="cart.html">
+					<ion-icon name="basket"></ion-icon>Cart<span> 0</span> 
+				</a>
+      </li>
+      <li class="logout"><a href="login.html">Logout</a></li>
+		</ul>
+    </nav>
+    <!-- Payment form -->
+
+    
+
+    <section class="container content-section">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items product-container">
+            <!-- <div class="cart-row">
+                <div class="cart-item cart-column">
+                    <img class="cart-item-image" src="media/gym-bag.png" width="100" height="100">
+                    <span class="cart-item-title">Addidas</span>
+                </div>
+                <span class="cart-price cart-column">$19.99</span>
+                <div class="cart-quantity cart-column">
+                    <input class="cart-quantity-input" type="number" value="1">
+                    <button class="btn btn-danger" type="button">REMOVE</button>
+                </div>
+            </div> -->
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
+    </section>
+  <!-- End of Cart -->
+  <h2 id="chk_out_title">Enter your Credit Card Details for Checkout</h2>
+<div class="chk_out_row">
+  <div class="col-75">
+    <div class="chk_out_container">
+      <form id="payment-form">
+      
+        <div class="chk_out_row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <p>Full Name must be and contain 5 - 20 characters</p>
+            
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <p>Email must be a valid address, eg: john@example.com</p>
+            
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <p>Address must be and contain 10 - 100 characters</p>
+
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York">
+            <p>City must be and contain 5-12 characters only</p>
+
+            <div class="chk_out_row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+                <p>State must be contain 2 UPPER CASE only,eg:(QC)</p>
+              </div>
+              
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+                <p>Zipcode must be 6 characters only e.g.(H3H 2P1)</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Credit Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <p>Credit Card must be and contain 16 digitwith - between (4 digits) eg:(1111-2222-3333-4444)</p>
+
+            <label for="telephone">Telephone</label>
+            <input type="text" id="telephone" name="telephone" placeholder="438-943-2222(optional)">
+            <p>Telephone must be a valid Canadian telephone number (10 digits) e.g.(514-111-1111)</p>
+
+            <div class="chk_out_row">
+              <div class="col-50">
+                <label for="expyear">Card Exp</label>
+                <input type="text" id="expyear" name="expyear" placeholder="08/23">
+                <p>Card expiry date must contain 4 digit with / between 2 digits.</p>
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+                <p>cvv must contain 3 digit only.</p>
+              </div>
+              <div class="col-50">
+                <label for="total">Total amount</label>
+                <!-- <input readonly="true" type="text" class="total" name="total"> -->
+                <span class="total">$0</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <!-- <input type="submit" value="Continue to checkout" class="chk_out_btn"> -->
+        <input type="submit" value="PURCHASE"class="btn btn-primary btn-purchase">
+      </form>
+     
+    </div>
+  </div>
+</div>
+
+    <!-- Payment form End -->
+	<footer id="footer">
+		<p>Yash Metwasa &copy;Fitness King - 2020</p>
+	</footer>
+	
+</div>
+<script src="js/validation.js"></script>
+<script src="js/main.js" ></script>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</body>
+</html>
